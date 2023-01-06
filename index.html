@@ -9,21 +9,67 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'contactForm')">Contact Form</button>
+        <button class="tablinks" onclick="openCity(event, 'privacyPolicy')">Privacy Policy</button>
+    </div>
 
-
-        <img class = "appIcon"src="Images/CCAppIcon.png" alt="image">
-
-        <div class="form">
-            <h1>CourtCheck Support Form</h1>
-            <form action="mailto:saijannali17@gmail.com" method="post" enctype="text/plain">
-                <input name="name" type="text" class="feedback-input" placeholder="Name" />
-                <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-                <input type="submit" value="SUBMIT" />
-            </form>
+    <!-- Tab Content -->
+    <div id="contactForm" class="tabcontent">
+        <div class="container">
+            <img class="appIcon" src="Images/CCAppIcon.png" alt="image">
+            <div class="form">
+                <h1>CourtCheck Support Form</h1>
+                <form action="mailto:saijannali17@gmail.com" method="post" enctype="text/plain">
+                    <input name="name" type="text" class="feedback-input" placeholder="Name" />
+                    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                    <input type="submit" value="SUBMIT" />
+                </form>
+            </div>
         </div>
-      </div>
+    </div>
+
+
+    <div id="privacyPolicy" class="tabcontent">
+        <div class="container">
+            <div>
+                <h1>Privacy Policy</h1>
+                <h4>Court Finder is committed to protecting the privacy of our users. We collect certain information in order to provide and improve our services, but we take steps to ensure that this information is kept secure and used only for the purposes for which it was collected.
+                    The information we collect may include: 
+       
+                <ul>
+                    <li>
+                        Check-in data: When a user checks in to a basketball court through our app, we collect information about the time and location of the check-in. This data is used to provide information about the number of players at a particular court and is not shared with third parties.
+                    </li>
+                </ul>
+    
+                    We do not sell or share any personal information with third parties for their marketing purposes. We may, however, share personal information with service providers who assist us in providing our services or with law enforcement agencies if required by law.
+                    If you have any questions about our privacy policy, please do not hesitate to contact us.
+                </h4>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+
+
 
 
 </body>
