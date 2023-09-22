@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-    <meta charset='UTF-8' />
+  <head>
+    <meta charset="UTF-8" />
     <title>Speaker Submission</title>
-    <link rel='stylesheet' href='style.css' />
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Tab links -->
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'contactForm')">Contact Form</button>
-        <button class="tablinks" onclick="openCity(event, 'privacyPolicy')">Privacy Policy</button>
+      <button class="tablinks" onclick="openCity(event, 'contactForm')">
+        Contact Form
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'privacyPolicy')">
+        Privacy Policy
+      </button>
     </div>
 
     <!-- Tab Content -->
     <div id="contactForm" class="tabcontent">
-        <div class="container">
-            <img class="appIcon" src="Images/CCAppIcon.png" alt="image">
-            <div class="form">
-                <h1>CourtCheck Support Form</h1>
-                <form action="mailto:saijannali17@gmail.com" method="post" enctype="text/plain">
-                    <input name="name" type="text" class="feedback-input" placeholder="Name" />
-                    <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-                    <input type="submit" value="SUBMIT" />
-                </form>
-            </div>
+      <div class="container">
+        <img class="appIcon" src="Images/CCAppIcon.png" alt="image" />
+        <div class="form">
+          <h1>CourtCheck Support Form</h1>
+          <form
+            action="mailto:saijannali17@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <input
+              name="name"
+              type="text"
+              class="feedback-input"
+              placeholder="Name"
+            />
+            <input
+              name="email"
+              type="text"
+              class="feedback-input"
+              placeholder="Email"
+            />
+            <textarea
+              name="text"
+              class="feedback-input"
+              placeholder="Comment"
+            ></textarea>
+            <input type="submit" value="SUBMIT" />
+          </form>
         </div>
+      </div>
     </div>
 
-
     <div id="privacyPolicy" class="tabcontent">
-        <div class="container">
-            <div>
-                <h1>Privacy Policy</h1>
-                <h4>Court Finder is committed to protecting the privacy of our users. We collect certain information in order to provide and improve our services, but we take steps to ensure that this information is kept secure and used only for the purposes for which it was collected.
-                    The information we collect may include: 
-       
-                <ul>
-                    <li>
-                        Check-in data: When a user checks in to a basketball court through our app, we collect information about the time and location of the check-in. This data is used to provide information about the number of players at a particular court and is not shared with third parties.
-                    </li>
-                </ul>
-    
-                    We do not sell or share any personal information with third parties for their marketing purposes. We may, however, share personal information with service providers who assist us in providing our services or with law enforcement agencies if required by law.
-                    If you have any questions about our privacy policy, please do not hesitate to contact us.
-                </h4>
-            </div>
+      <div class="container">
+        <div>
+          <h1>Privacy Policy</h1>
+          <h4>
+            At CourtCheck, we are committed to protecting the privacy of our
+            users. This Privacy Policy outlines the information we request user
+            permissions for and how we use it. Information Use:
+            <ul>
+              <li>
+                We request the user's current location to showcase a list of
+                basketball courts around them and provide live traffic
+                information such as the number of people currently at a certain
+                court or the availability of a court.
+              </li>
+              <li>
+                The app allows users to check-in and check-out of the courts, in
+                which case we request permission of the user's location data of
+                the court and the time of check-in and check-out.
+              </li>
+            </ul>
 
+            This information is used to provide and improve our service. We may
+            also use this information to personalize the content and advertising
+            displayed to users. Sharing of Information:
+            <ul>
+              <li>
+                We do not share any personally identifiable information with third parties for their promotional or marketing use. However, in the future, if we decide to sell user data to third-party vendors, we will update this Privacy Policy and obtain explicit consent from our users. We will also provide clear opt-out options for those who do not wish to have their data shared with third-party vendors. Additionally, we will only share non-personally identifiable information or aggregate data that cannot be traced back to an individual user.
+              </li>
+              <li>
+                We may disclose information as required by law or in the good faith belief that such action is necessary to comply with legal process or protect the safety of our users or the public.
+              </li>
+            </ul>
+
+            Security:
+            <ul>
+                <li>
+                    We take reasonable precautions to protect personal information from loss, misuse, and unauthorized access, disclosure, alteration, and destruction.
+                </li>
+            </ul>
+
+            Changes to this Policy:
+            <ul>
+                <li>
+                    We may update this Privacy Policy from time to time. If we make any changes, we will notify users by updating the "Last Updated" date at the top of this page.
+                </li>
+            </ul>
+
+            Contact Us at courtcheckteam@gmail.com
+          </br>
+        </br>
+            By using our service, you consent to our Privacy Policy.
+
+          </h4>
         </div>
+      </div>
     </div>
 
     <script>
-        function openCity(evt, cityName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " active";
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
         }
-        </script>
-
-
-
-
-</body>
-
-
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
 </html>
